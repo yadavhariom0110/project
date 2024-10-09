@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project</title>
+    <style>
+        body {
+            background-color: rgb(249, 249, 249);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        /* Container holding the image and the text */
+        .container {
+            position: relative;
+            text-align: center;
+            color: rgb(23, 23, 23);
+        }
+
+        /* Centered text */
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: larger;
+
+            h1 {
+                text-shadow: 2px 2px 8px #e6ea13;
+            }
+        }
+
+        /* Full-width input fields */
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /* Set a style for all buttons */
+        button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        /* Extra styles for the cancel button */
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+        /* Center the image and position the close button */
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+            position: relative;
+        }
+
+        img.avatar {
+            width: 40%;
+            border-radius: 50%;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+            padding-top: 60px;
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto;
+            /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width: 80%;
+            /* Could be more or less, depending on screen size */
+        }
+
+        /* The Close Button (x) */
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: red;
+            cursor: pointer;
+        }
+
+        /* Add Zoom Animation */
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+        .div {
+            font-size: large;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            color: white;
+            font-family: "Poppins", sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(229, 226, 226);
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 248);
+            font-size: 1.2rem;
+        }
+
+        main hr {
+            border: 0;
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Create three equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 10px;
+            height: 300px;
+            /* Should be removed. Only for demonstration */
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<img src="c:\Users\E-Library\Desktop\logoooo.jpg" alt="Workplace" usemap="#workmap" height="100">
+<header>
+    <nav>
+        <div class="left">WORLD HELTH
+        </div>
+        <div>
+            <img src="c:\Users\E-Library\Desktop\helth2.png" alt="WORLD HELTH" width="150" height="100">
+        </div>
+        <div class="right">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Projects</a></li>
+                <li><a href="">Contact</a></li>
+                <li> <button onclick="document.getElementById('id01').style.display='block'"
+                        style="width:auto;">Login</button></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<marquee style="color:black">
+
+    <h3>pharmacy, the science and art concerned with the preparation and standardization of drugs. Its scope includes
+        the cultivation of plants that are used as drugs, the synthesis of chemical compounds of medicinal value, and
+        the analysis of medicinal agents</h3>
+</marquee>
+
+<body>
+    <div class="container">
+        <img src="c:\Users\E-Library\Desktop\pharmacy2.jpg" alt="PHARMACY" width="1908" height="330">
+        <div class="centered">
+            <h1>WORLD HELTH</h1>
+            <div><input type="text" placeholder="search..."></div>
+        </div>
+    </div>
+    </div>
+
+    <div>
+        <img align="left" src="c:\Users\E-Library\Desktop\tree2.png" alt="PHARMACY" width="800" height="400">
+        <h1 style="color:#000">1.Herbal medicine</h1>
+        <p style="color: #000;">Herbal medicine, Also Called Botanical Medicine or Phytomedicine,
+            Refers To Using A Plant's Seeds,
+            Berries, Roots, Leaves, Bark, or Flowers for Medicinal Purposes. Herbalism Has a long Tradition of use
+            Outside Conventional Medicine</p>
+    </div>
+    <br><br><br><br><br><br>
+    <div>
+        <img align="right" src="c:\Users\E-Library\Desktop\New folder\chemisty.jpg" alt="" width="800" height="400">
+        <h1 style="color:#000">2.IrregularHeartbeat</h1>
+        <p style="color: #0f0f0f;">
+            The most common indications for digoxin are atrial fibrillation and atrial flutter with rapid ventricular
+            response especially in older or less active patients,though beta blockers and/or calcium
+            channel blockers may be preferred in some patients
+            such as younger more active ones
+            or those without heart
+            failure or hemodynamic instability</p>
+    </div>
+    <div>
+        <h1 style="color: #000;">3.Chronic kidney disease (CKD)</h1>
+        <p style="color:#000">
+            Chronic kidney disease is a growing global health concern with over 1.1 million deaths reported
+            worldwide from the disease. On this year’s World Kidney Day on 11 March, we look at the </p><br><br><br>
+        <p style="color:#000"> -implications of chronic
+            kidney disease on patients and their families.
+            People with chronic kidney disease usually may not feel sick or notice symptoms indicative of the
+            disease. This World Kidney Day is an opportunity to bring awareness to this condition. Awareness is all
+            the more important with the ongoing Coronavirus pandemic, as people with chronic kidney disease who are
+            infected with COVID-19 are at higher risk of serious illness</p>.
+        </p>
+    </div>
+
+    <h2>Three Equal Columns</h2>
+    <div class="row">
+        <div class="column" style="background-image:url('lungus.jpg');">
+            <h2>Chronic kidney disease (CKD)</h2><br><br><br>
+            <p>       Chronic kidney disease is a growing global health concern with over 1.1 million deaths reported worldwide
+                from the disease.On this year’s World Kidney Day on 11 March,we look-implications of chronic kidney disease on patients and their families.People with chronic kidney
+                disease usually may not feel sick or notice symptoms indicative of the disease. </p>
+        </div>
+        <div class="column" style="background-image: url('heart-disease-hub.jpg');">
+            <h2>Heart Diseases</h2><br><br><br>
+            <p>Heart disease is a general term that includes many types of heart problems. It's also called
+                cardiovascular disease, which means heart and blood vessel disease.
+
+                Heart disease is the leading cause of death in the United States, but there are ways to prevent and
+                manage many types of heart disease.</p>
+        </div>
+        <div class="column" style="background-image: url('blood.jpg');">
+            <h2>Common Types of Blood Cancer</h2><br><br><br>
+            <p>Blood cancer brings non-specific common symptoms related to loss or abnormal functions of blood cells.
+                Symptoms include generalised weakness, high-grade fever, night sweats, vomiting, breathing difficulties,
+                weight loss, recurrent infections, body or back pain, abdominal pain, GI upset, recurrent fractures,
+                unusual bleeding, or skin rashes. Other symptoms include abnormal glandular swellings involving the
+                neck, axillary or inguinal region. Patients may develop recurrent infections requiring hospitalisation.
+            </p>
+        </div>
+    </div>
+    </div>
+
+
+    <div>
+        <h1 style="color: #000;">*Chronic kidney disease (CKD)</h1>
+    </div>
+    </div>
+    <div id="id01" class="modal">
+
+        <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+                <img src="c:\Users\E-Library\Desktop\avatar.jpg" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                    class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
