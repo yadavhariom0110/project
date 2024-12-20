@@ -1,2 +1,3 @@
-# resumes-
-my resume is web development  course
+#This is my demo code
+This is my first Repository.
+Author _ Hariom Yadav 
